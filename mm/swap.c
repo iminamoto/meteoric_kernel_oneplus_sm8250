@@ -409,7 +409,6 @@ void mark_page_accessed(struct page *page)
 #ifdef CONFIG_MAPPED_PROTECT
 	mapped_page_try_sorthead(page);
 #endif
-
 	if (lru_gen_enabled()) {
 		page_inc_refs(page);
 		return;
